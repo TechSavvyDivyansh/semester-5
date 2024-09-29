@@ -1,0 +1,52 @@
+{
+  "books": [
+    {
+      "isbn": "978-0143128540",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "publication_year": 1925,
+      "genre": "Fiction",
+      "price": 10.99
+    },
+    {
+      "isbn": "978-0061120084",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "publication_year": 1960,
+      "genre": "Classic",
+      "price": 7.99
+    },
+    {
+      "isbn": "978-0544003415",
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "publication_year": 1937,
+      "genre": "Fantasy",
+      "price": 12.49
+    },
+    {
+      "isbn": "978-0544003417",
+      "title": "Harry Potter And Chamber Of secrets",
+      "author": "J.K.Rowling",
+      "publication_year": 2006,
+      "genre": "Fantasy",
+      "price": 12.49
+    },
+    {
+      "isbn": "978-0307387899",
+      "title": "The Road",
+      "author": "Cormac McCarthy",
+      "publication_year": 2006,
+      "genre": "Post-apocalyptic",
+      "price": 9.99
+    },
+    {
+      "isbn": "978-1501128035",
+      "title": "The Girl on the Train",
+      "author": "Paula Hawkins",
+      "publication_year": 2015,
+      "genre": "Thriller",
+      "price": 14.99
+    }
+  ]
+}

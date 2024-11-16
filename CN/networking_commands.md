@@ -2,177 +2,175 @@
 
 ## 1. IP Configuration and Interface Information
 - **Windows**:  
-  - `ipconfig`: Displays basic IP configuration details such as IP address, subnet mask, and default gateway.  
-  - `ipconfig /all`: Provides detailed network configuration, including DNS servers, MAC address, and DHCP settings.  
+  - `ipconfig`: View IP configuration.  
+  - `ipconfig /all`: Detailed network settings.  
 
 - **Linux**:  
-  - `ifconfig` (deprecated, use `ip addr`): Shows network interfaces and their IP addresses.  
-  - `ip addr show`: Displays detailed IP address and interface information.  
+  - `ifconfig` (deprecated): Show network details.  
+  - `ip addr show`: Modern replacement for `ifconfig`.  
 
-**Use Case**: Troubleshooting network issues, checking IP addresses, and verifying network adapter settings.  
+**Use Case**: Check IP, subnet, and adapter info.  
 
 ---
 
 ## 2. MAC Address
 - **Windows**:  
-  - `getmac`: Displays the MAC address of all active network interfaces.  
+  - `getmac`: Display MAC addresses.  
 
 - **Linux**:  
-  - `ip link show`: Lists all network interfaces along with their MAC addresses.  
-  - `ifconfig | grep ether`: Extracts MAC addresses from interface details.  
+  - `ip link show`: Show MAC of interfaces.  
+  - `ifconfig | grep ether`: Extract MAC address.  
 
-**Use Case**: Identifying devices on a network, configuring access control, or troubleshooting network hardware issues.  
+**Use Case**: Identify devices or manage access.  
 
 ---
 
 ## 3. ARP Table
 - **Windows**:  
-  - `arp -a`: Shows the ARP (Address Resolution Protocol) table with resolved IP-to-MAC address mappings.  
+  - `arp -a`: View IP-to-MAC mappings.  
 
 - **Linux**:  
-  - `arp -n`: Displays the ARP table without resolving IP addresses to hostnames.  
-  - `ip neighbor show`: Shows neighbor cache entries (similar to ARP table).  
+  - `arp -n`: Display ARP table.  
+  - `ip neighbor show`: Show neighbor cache.  
 
-**Use Case**: Diagnosing connectivity problems and resolving duplicate IP issues.  
+**Use Case**: Debug connectivity or IP conflicts.  
 
 ---
 
 ## 4. DNS Lookup
 - **Windows**:  
-  - `nslookup`: Queries DNS servers for domain name resolution.  
-  - `nslookup <domain>`: Finds the IP address of a specific domain.  
+  - `nslookup`: Query DNS for domain info.  
 
 - **Linux**:  
-  - `nslookup`: Similar functionality to Windows.  
-  - `dig <domain>`: Performs advanced DNS queries with detailed output.  
+  - `nslookup`: Same as Windows.  
+  - `dig`: Advanced DNS queries.  
 
-**Use Case**: Resolving domain names, verifying DNS configuration, and diagnosing DNS issues.  
+**Use Case**: Resolve domain names.  
 
 ---
 
 ## 5. Traceroute
 - **Windows**:  
-  - `tracert <domain>`: Traces the route packets take to reach a specific destination.  
+  - `tracert`: Trace the path to a destination.  
 
 - **Linux**:  
-  - `traceroute <domain>`: Provides hop-by-hop details of packet routes to the destination.  
+  - `traceroute`: Same as Windows.  
 
-**Use Case**: Identifying network bottlenecks and tracing network paths.  
+**Use Case**: Identify network delays.  
 
 ---
 
 ## 6. Network Statistics
 - **Windows**:  
-  - `netstat`: Displays active connections, ports, and protocol usage.  
-  - `netstat -an`: Lists all active ports and their listening states.  
+  - `netstat`: Show active connections.  
 
 - **Linux**:  
-  - `netstat`: Similar functionality to Windows (requires installation on some systems).  
-  - `ss -tuln`: A modern alternative for displaying socket and port statistics.  
+  - `netstat`: Same as Windows.  
+  - `ss -tuln`: Modern alternative for socket info.  
 
-**Use Case**: Monitoring active connections, troubleshooting port issues, and identifying unauthorized access.  
+**Use Case**: Monitor connections and ports.  
 
 ---
 
 ## 7. Ping
 - **Windows**:  
-  - `ping <domain or IP>`: Sends ICMP echo requests to test connectivity.  
+  - `ping`: Test connectivity to a host.  
 
 - **Linux**:  
-  - `ping <domain or IP>`: Same as Windows.  
+  - `ping`: Same as Windows.  
 
-**Use Case**: Checking if a host is reachable and measuring network latency.  
+**Use Case**: Check host availability.  
 
 ---
 
 ## 8. Route Information
 - **Windows**:  
-  - `route print`: Displays the system's routing table.  
+  - `route print`: Display routing table.  
 
 - **Linux**:  
-  - `route -n`: Shows routing table without DNS resolution.  
-  - `ip route show`: Displays routing table in a modern format.  
+  - `route -n`: Show routes.  
+  - `ip route show`: Modern routing table display.  
 
-**Use Case**: Diagnosing routing issues and verifying network routes.  
+**Use Case**: Diagnose routing issues.  
 
 ---
 
 ## 9. Hostname
 - **Windows**:  
-  - `hostname`: Displays the name of the local system.  
+  - `hostname`: Get the system name.  
 
 - **Linux**:  
   - `hostname`: Same as Windows.  
 
-**Use Case**: Identifying the name of the system for network communication or troubleshooting.  
+**Use Case**: Identify system on a network.  
 
 ---
 
 ## 10. Open Ports
 - **Windows**:  
-  - `netstat -an | find "LISTEN"`: Shows all open and listening ports.  
+  - `netstat -an | find "LISTEN"`: Show listening ports.  
 
 - **Linux**:  
-  - `netstat -an | grep LISTEN`: Similar to Windows.  
-  - `ss -tuln`: Modern and faster alternative to list open ports.  
+  - `netstat -an | grep LISTEN`: Same as Windows.  
+  - `ss -tuln`: Modern open port viewer.  
 
-**Use Case**: Detecting services running on the system and diagnosing security issues.  
+**Use Case**: Check running services or security.  
 
 ---
 
 ## 11. Default Gateway
 - **Windows**:  
-  - `ipconfig | findstr "Gateway"`: Displays the default gateway.  
+  - `ipconfig | findstr "Gateway"`: View default gateway.  
 
 - **Linux**:  
-  - `ip route | grep default`: Shows the default gateway.  
+  - `ip route | grep default`: Show default gateway.  
 
-**Use Case**: Verifying gateway configuration and troubleshooting internet access.  
+**Use Case**: Verify internet gateway.  
 
 ---
 
 ## 12. Test Specific Port Connectivity
 - **Windows**:  
-  - `telnet <IP> <port>`: Tests connectivity to a specific port on a server.  
+  - `telnet`: Test server port connectivity.  
 
 - **Linux**:  
-  - `telnet <IP> <port>`: Same as Windows.  
-  - `nc -zv <IP> <port>`: Modern alternative to test port connectivity.  
+  - `telnet`: Same as Windows.  
+  - `nc -zv`: Modern connectivity tester.  
 
-**Use Case**: Verifying if a port is open and accessible.  
+**Use Case**: Test if ports are open.  
 
 ---
 
 ## 13. Check Current User's Connections
 - **Windows**:  
-  - `net session`: Lists all active sessions.  
-  - `net user`: Displays user accounts on the system.  
+  - `net session`: List active sessions.  
+  - `net user`: Show user accounts.  
 
 - **Linux**:  
-  - `who`: Lists logged-in users.  
-  - `w`: Shows who is logged in and their activities.  
+  - `who`: View logged-in users.  
+  - `w`: Show user activity.  
 
-**Use Case**: Monitoring active sessions and user activities.  
+**Use Case**: Monitor sessions or users.  
 
 ---
 
 ## 14. Download Files via Command
 - **Windows**:  
-  - `curl <URL>`: Downloads files or data from a URL.  
+  - `curl`: Fetch files from a URL.  
 
 - **Linux**:  
-  - `curl <URL>`: Similar to Windows.  
-  - `wget <URL>`: Another option for downloading files.  
+  - `curl`: Same as Windows.  
+  - `wget`: Another file downloader.  
 
-**Use Case**: Downloading files from the internet or APIs.  
+**Use Case**: Download files or data.  
 
 ---
 
 ## 15. Network Performance
 - **Windows**:  
-  - `iperf3`: A third-party tool for testing network bandwidth.  
+  - `iperf3`: Test bandwidth (third-party).  
 
 - **Linux**:  
   - `iperf3`: Same as Windows.  
 
-**Use Case**: Measuring network performance and diagnosing bandwidth issues.  
+**Use Case**: Measure network speed.  

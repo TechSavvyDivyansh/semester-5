@@ -1,3 +1,5 @@
+`disclamer : for exam refer only windows part till 7.ping`
+
 # Networking Commands: Windows vs. Linux
 
 ## 1. IP Configuration and Interface Information

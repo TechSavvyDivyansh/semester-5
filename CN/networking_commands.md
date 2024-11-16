@@ -8,7 +8,7 @@
   - `ipconfig /all`: Detailed network settings.  
 
 - **Linux**:  
-  - `ifconfig` (deprecated): Show network details.  
+  - `ip addr` : Show network details.  
   - `ip addr show`: Modern replacement for `ifconfig`.  
 
 **Use Case**: Check IP, subnet, and adapter info.  

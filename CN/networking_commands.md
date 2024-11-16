@@ -9,7 +9,6 @@
 
 - **Linux**:  
   - `ip addr` : Show network details.  
-  - `ip addr show`: Modern replacement for `ifconfig`.  
 
 **Use Case**: Check IP, subnet, and adapter info.  
 
@@ -21,7 +20,7 @@
 
 - **Linux**:  
   - `ip link show`: Show MAC of interfaces.  
-  - `ifconfig | grep ether`: Extract MAC address.  
+  - `ip addr | grep ether`: Extract MAC address.  
 
 **Use Case**: Identify devices or manage access.  
 
@@ -165,14 +164,3 @@
   - `wget`: Another file downloader.  
 
 **Use Case**: Download files or data.  
-
----
-
-## 15. Network Performance
-- **Windows**:  
-  - `iperf3`: Test bandwidth (third-party).  
-
-- **Linux**:  
-  - `iperf3`: Same as Windows.  
-
-**Use Case**: Measure network speed.  

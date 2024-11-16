@@ -1,4 +1,4 @@
-`disclamer : for exam refer only windows part till 7.ping`
+`disclamer : for exam refer only commands for windows till 7.ping`
 
 # Networking Commands: Windows vs. Linux
 

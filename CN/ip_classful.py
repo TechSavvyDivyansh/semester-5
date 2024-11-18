@@ -10,12 +10,14 @@ def get_class_details(ip):
     elif 192<=first_byte<=223:
         ip_class='C'
         subnet_mask='255.255.255.0'
-    elif 224<=first_byte<=239:
+    elif 224<=first_byte<=239:      
         ip_class='D'
         subnet_mask='none'
+        return ip_class, subnet_mask, 'N/A', 'N/A'
     elif 240<=first_byte<=255:
         ip_class='E'
         subnet_mask='none'
+        return ip_class, subnet_mask, 'N/A', 'N/A'
 
 
     first_ip=and_operation(ip,subnet_mask)

@@ -6,8 +6,8 @@
 	- byte stuffying
 	- bit stuffying
 - **Error detection and correction**
-    - CRC `(error detection)`
-    - hamming code `(error detection and correction)`
+    - CRC  `error detection`
+    - hamming code  `error detection and correction`
 - **stop and wait protocol**
 - **Sliding window protocol**
 	- selective repeat

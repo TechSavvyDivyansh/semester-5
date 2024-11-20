@@ -18,6 +18,7 @@ conn.sendall(b"hello client server here")
 
 
 with conn:
+    # while True used for infinite loop
     while True:
         
         # Receive data from the client

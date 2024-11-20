@@ -1,6 +1,5 @@
 import socket
 
-
 def create_client_socket():
     
     host='127.0.0.1'

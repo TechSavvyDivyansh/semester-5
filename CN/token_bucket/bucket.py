@@ -2,6 +2,7 @@ import socket
 import threading
 import time
 
+
 # Global bucket and its size limit
 bucket_token_list = []
 MAX_BUCKET_SIZE = 10

@@ -22,7 +22,7 @@ def create_server_socket():
 
 
 def leak_items_from_bucket():
-    global bucket_list
+    
     while True:
         with lock:
             if bucket_list:
@@ -35,8 +35,6 @@ def leak_items_from_bucket():
 
 
 def add_items_to_bucket(client_socket):
-    global bucket_list
-
 
     # while loop required to keep receiving data and adding it in bucket
     while True:
@@ -55,7 +53,7 @@ def add_items_to_bucket(client_socket):
                     print("overflowed")
                     # time.sleep(TIME_LAPSE)
                 else:
-                    bucket_list.append(int(incoming_data))  # Convert incoming data to integer
+                    bucket_list.append(incoming_data)  # Convert incoming data to integer
                     print(f"Updated bucket: {bucket_list}")
         except Exception as e:
             print(f"Error handling client: {e}")

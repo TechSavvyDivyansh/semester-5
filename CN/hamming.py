@@ -55,7 +55,7 @@ def encode(data,parity_type):
 
 
 
-def error_posn_detection(data,parity_type):
+def detect_error(data,parity_type):
     error_posn_list=[]         
     
     for i in range(7):
@@ -71,7 +71,7 @@ def error_posn_detection(data,parity_type):
     return error_posn_value,data                      #sending processed data(so again no reversing reqd) p1 to D7 data and error posn 
 
 
-def error_correction(processed_data,error_posn):
+def correct_error(processed_data,error_posn):
     processed_data=[int(d) for d in list(processed_data)]
     processed_data[error_posn-1]=1-processed_data[error_posn-1]
     return processed_data[::-1]
@@ -83,12 +83,12 @@ def decode(value_to_be_checked,parity_type):
 
     processed_data=[int(d) for d in list(value_to_be_checked)[::-1]]          #p1 to D7 format
 
-    error_posn,processed_data=error_posn_detection(processed_data,parity_type)
+    error_posn,processed_data=detect_error(processed_data,parity_type)
     if(error_posn==0):
         return "no error found"
     else:
         print(f"error found at D{error_posn}")
-        corrected=error_correction(processed_data,error_posn)
+        corrected=correct_error(processed_data,error_posn)
         return f"corrected :{corrected}"
 
 

@@ -23,7 +23,6 @@ def client_logic(client_socket):
     try:
         while base < len(data_list):
             if retransmit_index != -1 and start_time is None:
-                
                 start_time = time.time()                    # Start custom timer when NACK is received
 
             frame = f"{data_list[base]}"         # Frame starts from index + 1

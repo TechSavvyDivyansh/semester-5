@@ -38,7 +38,6 @@ def client_logic(client_socket):
                     print(f"Received ACK for frame {base + 1}")
                     base += 1                               # Move to the next frame
                 elif response == "NACK":
-                    print(f"Received NACK for frame {base + 1}. Marking for retransmission.")
                     retransmit_index = base + 1             # Set retransmission starting point
                     base += 1                               # Continue sending frames in sequence
 
@@ -48,10 +47,12 @@ def client_logic(client_socket):
 
             # If custom timer expires, retransmit from retransmit_index
             if retransmit_index != -1 and start_time is not None and time.time() - start_time >= CUSTOM_TIMER:
-                print(f"Retransmitting frames starting from {retransmit_index}")
+                print(f"Received NACK for frame {retransmit_index} \nRetransmitting frames starting from {retransmit_index}")
                 base = retransmit_index - 1  # Reset base to retransmit_index for retransmission
                 retransmit_index = -1  # Reset retransmit_index
                 start_time = None  # Reset timer
+            
+            print("")
 
         print("All frames sent successfully.")
 

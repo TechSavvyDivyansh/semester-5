@@ -11,7 +11,7 @@ def create_server_socket():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((SERVER_HOST, SERVER_PORT))
     server_socket.listen()
-    print(f"Server started and listening on {SERVER_HOST}:{SERVER_PORT}")
+    print(f"Server started and listening on {SERVER_HOST}:{SERVER_PORT}\n")
     return server_socket
 
 
@@ -27,7 +27,7 @@ def handle_client(client_socket):
 
 
             # Simulating user input for NACK or timeout
-            print("Press 1 and Enter to simulate NACK, or wait for timeout to send ACK:")
+            print("Press 1 for NACK or wait for ACK:")
             start_time = time.time()
 
             user_input = None
@@ -40,8 +40,11 @@ def handle_client(client_socket):
                 print("Sending NACK")
                 client_socket.send("NACK".encode())
             else:
-                print("Timeout! Sending ACK")
+                print("Sending ACK")
                 client_socket.send("ACK".encode())
+
+            print("")
+
     except Exception as e:
         print(f"Error: {e}")
     finally:

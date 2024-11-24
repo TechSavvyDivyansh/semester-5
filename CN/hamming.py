@@ -1,11 +1,14 @@
 import math
 
+hamming_bit=9
+
+
 def is_power_of_two_algebraic(n):
     log_result = math.log2(n)
     return log_result.is_integer()  # Check if log_result is a whole number
 
 def get_parity_positions(posn):
-    n = 7
+    n = hamming_bit
     final_list = []
     i = posn  # Start with the first element
     
@@ -24,7 +27,7 @@ def get_parity_positions(posn):
 
 def insert_data(data,result):
     for i in data:
-        for j in range(0,7):
+        for j in range(0,hamming_bit):
             if not is_power_of_two_algebraic(j+1) and result[j]=='-':
                 result[j]=i
                 break  
@@ -32,7 +35,7 @@ def insert_data(data,result):
 
 
 def insert_parity(parity_type,result):
-    for i in range(7):
+    for i in range(hamming_bit):
         if(result[i]=="-"):
             posn_list=get_parity_positions(i+1)
             data_list=[result[p] for p in posn_list]
@@ -45,7 +48,7 @@ def insert_parity(parity_type,result):
 
 def encode(data,parity_type):
     # while encoding only data needs to be reversed as data is feed from D7 backwards
-    result=['-']*7
+    result=['-']*hamming_bit
     data_processed = [int(d) for d in list(data)[::-1]]
     result=insert_data(data_processed,result)
     print(result[::-1])                                     #reverse just for display from D7 to P1
@@ -58,7 +61,7 @@ def encode(data,parity_type):
 def detect_error(data,parity_type):
     error_posn_list=[]         
     
-    for i in range(7):
+    for i in range(hamming_bit):
         if(is_power_of_two_algebraic(i+1)):
             p_sum=sum(data[i] for i in get_parity_positions(i+1))
             

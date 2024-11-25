@@ -1,12 +1,11 @@
 def xor(a,b):
     c=[]
     for i,j in zip(a,b):
-        if(i=='1' and j=='0' or i=='0' and j=='1'):
+        if(i!=j):
             c.append('1')
         else:
             c.append('0')
     return c
-
 
 def division(divisor,dividend):
     n=len(divisor)
@@ -18,7 +17,7 @@ def division(divisor,dividend):
 
 
     #division loop
-    while(i!=len(dividend)):
+    while(i!=m):
         current_target_string=''.join(current_target[-n:])
         divisor_string=''.join(divisor)
 

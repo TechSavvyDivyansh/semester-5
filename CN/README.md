@@ -19,5 +19,5 @@
 - **congestion control**
 	- leaky bucket
 	- token bucket
-- **IP classfull**
+- **IP classful**
 - **packet tracer**

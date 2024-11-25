@@ -57,7 +57,7 @@ ip=input("Enter you ip:")
 ip_split=ip.split(".")
 print("\n")
 
-if len(ip_split)>4 or all(int(octet)>255 for octet in ip_split):
+if len(ip_split)>4 or any(int(octet)>255 for octet in ip_split):
     print("invalid ip address")
 else:
     ip_class,subnet_mask,first_ip,last_ip=get_class_details(ip)

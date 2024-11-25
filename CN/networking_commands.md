@@ -1,4 +1,4 @@
-`note : for exam refer only commands for windows till 7.ping`
+`note : for exam refer only commands for windows till 8.Route Information`
 
 # Networking Commands: Windows vs. Linux
 

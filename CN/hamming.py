@@ -75,7 +75,6 @@ def detect_error(data,parity_type):
 
 
 def correct_error(processed_data,error_posn):
-    processed_data=[int(d) for d in list(processed_data)]
     processed_data[error_posn-1]=1-processed_data[error_posn-1]
     return processed_data[::-1]
 

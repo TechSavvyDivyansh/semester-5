@@ -1,7 +1,7 @@
 import socket
 import time 
 
-HOST='192.168.29.225'
+HOST='0.0.0.0'
 PORT=5000
 
 client_socket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)

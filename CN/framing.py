@@ -31,6 +31,7 @@ def byte_stuffing():
 
 def bit_stuffing():
     data = list(input("Enter data: "))
+    flag = input("enter start,end flag: ")
     c = 0
     i = 0
 
@@ -49,18 +50,18 @@ def bit_stuffing():
         
         i += 1                              # Move to the next bit
 
-    return ''.join(data)                    # Join the list to form a string
+    return flag+''.join(data)+flag                    # Join the list to form a string
 
 
 
-print("character count:")
-transmitted_message_character_count=character_count()
-print("transmitted message character count:"+transmitted_message_character_count)
+# print("character count:")
+# transmitted_message_character_count=character_count()
+# print("transmitted message character count:"+transmitted_message_character_count)
 
 
-print("byte stuffing:")
-transmitted_message_byte_stuffing=byte_stuffing()
-print("transmitted message byte stuffing:"+transmitted_message_byte_stuffing)
+# print("byte stuffing:")
+# transmitted_message_byte_stuffing=byte_stuffing()
+# print("transmitted message byte stuffing:"+transmitted_message_byte_stuffing)
 
 
 print("bit stuffing:")

@@ -14,7 +14,6 @@ parent=n*[-1]
 source=0
 
 dist[source]=0
-c=0
 
 
 def relax(u,v):

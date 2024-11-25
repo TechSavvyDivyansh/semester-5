@@ -71,7 +71,7 @@ def detect_error(data,parity_type):
     error_posn_list=error_posn_list[::-1]                       # we want p4,p2 and p1 hence need to reverse
     error_posn_value=int(''.join(map(str, error_posn_list)), 2)
     
-    return error_posn_value,data                      #sending processed data(so again no reversing reqd) p1 to D7 data and error posn 
+    return error_posn_value
 
 
 def correct_error(processed_data,error_posn):
@@ -86,7 +86,7 @@ def decode(value_to_be_checked,parity_type):
 
     processed_data=[int(d) for d in list(value_to_be_checked)[::-1]]          #p1 to D7 format
 
-    error_posn,processed_data=detect_error(processed_data,parity_type)
+    error_posn=detect_error(processed_data,parity_type)
     if(error_posn==0):
         return "no error found"
     else:

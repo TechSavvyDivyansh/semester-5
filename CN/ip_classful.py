@@ -42,7 +42,7 @@ def and_operation(ip,subnet):
 def notor_operation(ip,subnet):
     # Convert IP address and subnet mask to binary
     ip_octets = [int(octet) for octet in ip.split('.')]
-    mask_octets = [~int(octet) & 0xFF for octet in subnet.split('.')]
+    mask_octets = [~int(octet) & 0xFF for octet in subnet.split('.')]           # 0xFF is the hexadecimal representation of the decimal number 255.
 
     # Perform the bitwise AND operation
     network_octets = [ip_octet | mask_octet for ip_octet, mask_octet in zip(ip_octets, mask_octets)]

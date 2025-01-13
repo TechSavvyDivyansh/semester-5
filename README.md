@@ -6,7 +6,6 @@ Welcome to my **Semester 5 Code Repository**! This repository contains all the p
 
 - [Computer Networks (CN)](https://github.com/TechSavvyDivyansh/semester-5/tree/main/CN)
 - [Advanced Database Management Systems (ADBMS)](https://github.com/TechSavvyDivyansh/semester-5/tree/main/adbms)
-- **Data Warehousing and Mining (DWM)** - Coming soon!
 
 ## Overview
 
